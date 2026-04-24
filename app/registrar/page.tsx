@@ -77,7 +77,7 @@ export default function Instructor() {
         <div className="flex justify-between items-end mb-8">
             <div>
             <h1 className="text-3xl font-bold">Instructor Page</h1>
-            <p className="text-gray-400">Here are the classes you are teaching</p>
+            <p className="text-gray-400">Here's what's on your itinerary</p>
             </div>
             
             {/* TIME & SEMESTER STATUS */}
