@@ -100,9 +100,9 @@ export default function Instructor() {
                 <div className="text-sm flex flex-col gap-2 mt-5">
                   <Link href="" className="block bg-blue-500 p-5 rounded-lg">Class List</Link>
                   <span className="flex flex-row gap-3 w-full">
-                    <Link href="" className=" block bg-orange-500 p-5 rounded-lg">Enter Grades</Link>
-                    <div className=" block bg-slate-800 p-5 rounded-lg border border-green-300 text-green-300 hover:bg-green-950/50 hover:shadow-sm hover:shadow-green-500 transition-all duration-150">Average: {course.average}</div>
-
+                    <Link href="" className=" block bg-orange-500 p-5 rounded-lg w-full text-center">Enter Grades</Link>
+                    <div className="w-full block bg-slate-800 p-5 rounded-lg border border-green-300 text-green-300 hover:bg-green-950/50 hover:shadow-sm hover:shadow-green-500 transition-all duration-150 text-center">Average: {course.average}</div>
+                    <Link href="" className="w-full block bg-red-500 p-5 rounded-lg text-center">File Complaint</Link>
                   </span>
                 </div>
             </div>

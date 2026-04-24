@@ -2,36 +2,51 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function Instructor() {
+export default function Registrar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const sampleclasses = [
-    { name :'Advanced Mathematics',
-      room :'302',
-      days : 'Mon/Wed/Fri',
-      students : 25,
-      average : 'B+'
+  const sampleStudentApps = [
+    { 
+        name: "Karol Kopciuch",
+        gpa: 3.5,
+        target_major: "Computer Science"
     },
     {
-      name :'Intro To Computer Science',
-      room :'104',
-      days : 'Mon/Wed/Fri',
-      students : 50, 
-      average : 'A'
+        name: "Marcus Coppa",
+        gpa: 3.5,
+        target_major: "Computer Science"
     },
     {
-      name :'Digital Marketing',
-      room :'206',
-      days : 'Tue/Thur',
-      students : 28,
-      average : 'B'
+        name: "Bogdan Hermanowski",
+        gpa: 3.5,
+        target_major: "Mechanical Engineering"
     },
     {
-      name :'Artificial Intelligence Lab',
-      room :'101',
-      days : 'Tue/Thur',
-      students : 19,
-      average : 'C-'
+        name: "Bogdan Hermanowski4",
+        gpa: 3.5,
+        target_major: "Mechanical Engineering"
+    },
+    {
+        name: "Bogdan Hermanowski2",
+        gpa: 3.5,
+        target_major: "Mechanical Engineering"
+    },
+    {
+        name: "Bogdan Hermanowski3",
+        gpa: 3.5,
+        target_major: "Mechanical Engineering"
+    }
+  ];
+  const sampleInstructorApps = [
+    {
+        name: "Frank Hill",
+        expertise: "Computer Science",
+        degree: "M.S"
+    },
+    {
+        name: "Diana Burke",
+        expertise: "Anthropology",
+        degree: "Ph.D"
     }
   ];
 
@@ -52,10 +67,16 @@ export default function Instructor() {
                 Main Page
             </Link>
             <Link 
-                href="/student/class-registration" 
+                href="" 
                 className="p-3 rounded-md bg-slate-700 transition-colors" 
             >
-                Class Information
+                Applications
+            </Link>
+            <Link 
+                href="" 
+                className="p-3 rounded-md transition-colors" 
+            >
+                Semester Management
             </Link>
             <Link 
                 href="/student/help" 
@@ -76,8 +97,8 @@ export default function Instructor() {
       <main className="flex-1 p-10 "> 
         <div className="flex justify-between items-end mb-8">
             <div>
-            <h1 className="text-3xl font-bold">Instructor Page</h1>
-            <p className="text-gray-400">Here's what's on your itinerary</p>
+            <h1 className="text-3xl font-bold">Application Management</h1>
+            <p className="text-gray-400">Admit students and professors into the college</p>
             </div>
             
             {/* TIME & SEMESTER STATUS */}
@@ -90,23 +111,39 @@ export default function Instructor() {
         </div>
 
         {/* CLASSES GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-scroll">
-            {sampleclasses.map((course) => (
-            <div key={course.name} className="p-6 bg-slate-800 border border-slate-700 rounded-xl hover:border-blue-500 transition-colors">
-                <span className='flex flex-row justify-between'>
-                  <h3 className="text-lg font-semibold mb-1">{course.name}</h3>
-                </span>
-                <p className="text-sm text-gray-400">Room {course.room} • {course.days}</p>
-                <div className="text-sm flex flex-col gap-2 mt-5">
-                  <Link href="" className="block bg-blue-500 p-5 rounded-lg">Class List</Link>
-                  <span className="flex flex-row gap-3 w-full">
-                    <Link href="" className=" block bg-orange-500 p-5 rounded-lg">Enter Grades</Link>
-                    <div className=" block bg-slate-800 p-5 rounded-lg border border-green-300 text-green-300 hover:bg-green-950/50 hover:shadow-sm hover:shadow-green-500 transition-all duration-150">Average: {course.average}</div>
-
-                  </span>
-                </div>
-            </div>
-            ))}
+        <h2 className="text-2xl font-bold mt-5 mb-2">Student Applications</h2>
+        <div className="border-b-2 border-gray-700 mb-2"></div>
+        <div className="grid grid-cols-1 gap-4 overflow-y-scroll bg-slate-700 p-5 rounded-lg max-h-1/3">
+            {sampleStudentApps.map((student) => {
+                return(
+                    <div key={student.name} className="flex flex-row justify-between bg-slate-900 p-4 items-center rounded-md">
+                        <p className="w-full">{student.name}</p>
+                        <p className="w-full">{student.target_major}</p>
+                        <p className="w-full">{student.gpa}</p>
+                        <span className="flex flex-row gap-2">
+                            <button className="bg-blue-950 border border-green-600 text-green-600 p-2 rounded-md hover:bg-green-950 hover:shadow-sm hover:shadow-green-700 transition-all duration-150">Admit</button>
+                            <button className="bg-blue-950 border border-red-600 text-red-600 p-2 rounded-md hover:bg-red-950 hover:shadow-sm hover:shadow-red-700 transition-all duration-150">Reject</button>
+                        </span>
+                    </div>
+                );
+            })}
+        </div>
+        <h2 className="text-2xl font-bold mt-5 mb-2">Professor Applications</h2>
+        <div className="border-b-2 border-gray-700 mb-2"></div>
+        <div className="grid grid-cols-1  gap-4 overflow-y-scroll bg-slate-700 p-5 rounded-lg max-h-1/3">
+            {sampleInstructorApps.map((instructor) => {
+                return(
+                    <div key={instructor.name} className="flex flex-row justify-between bg-slate-900 p-4 items-center rounded-md">
+                        <p className="w-full">{instructor.name}</p>
+                        <p className="w-full">{instructor.expertise}</p>
+                        <p className="w-full">{instructor.degree}</p>
+                        <span className="flex flex-row gap-2">
+                            <button className="bg-blue-950 border border-green-600 text-green-600 p-2 rounded-md hover:bg-green-950 hover:shadow-sm hover:shadow-green-700 transition-all duration-150">Admit</button>
+                            <button className="bg-blue-950 border border-red-600 text-red-600 p-2 rounded-md hover:bg-red-950 hover:shadow-sm hover:shadow-red-700 transition-all duration-150">Reject</button>
+                        </span>
+                    </div>
+                );
+            })}
         </div>
 
       </main>
