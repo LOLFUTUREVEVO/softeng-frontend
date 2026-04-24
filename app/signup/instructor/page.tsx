@@ -1,19 +1,19 @@
 import Link from "next/link";
 
-export default function StudentSignup() {
+export default function InstructorSignup() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center  font-sans bg-slate-900 gap-10">
         <p className="text-white text-7xl font-bold">College One Application Portal</p>
         {/* Here is the main signup page content. */}
         <div className="rounded-lg bg-gray-400/20 p-15 w-1/3  flex flex-col gap-3">
-            <p className="text-2xl text-white">Student App</p>
+            <p className="text-2xl text-white">Instructor App</p>
             <p className="text-xl">Select Your Institution</p>
             <div className="border-b-2 border-gray-500"></div>
             <select className="bg-white rounded-lg p-2 text-xl text-black justify-start items-end mb-10">
                 <option>University College</option>
                 <option>City College Of New York</option>
             </select>
-            <p className="text-xl">Student Information</p>
+            <p className="text-xl">Instructor Information</p>
             <div className="border-b-2 border-gray-500"></div>
             <span className="text-lg flex flex-row gap-2">
                 <div>
@@ -37,8 +37,15 @@ export default function StudentSignup() {
             </span>
             <p>Address</p>
             <input className="bg-white rounded-md py-2 text-black mb-10" ></input>
-            <p className="text-xl">Major Selection</p>
+            <p className="text-xl">Area Of Expertise</p>
             <div className="border-b-2 border-gray-500"></div>
+            <p>Degree Level</p>
+            <select className="bg-white rounded-lg p-2 text-xl text-black justify-start items-end">
+                <option>B.S</option>
+                <option>M.S</option>
+                <option>Ph.D</option>
+            </select>
+            <p>Topic</p>
             <select className="bg-white rounded-lg p-2 text-xl text-black justify-start items-end mb-10">
                 <option>Computer Science</option>
                 <option>Computer Engineering</option>
