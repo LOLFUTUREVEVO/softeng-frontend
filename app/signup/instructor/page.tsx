@@ -7,45 +7,45 @@ export default function InstructorSignup() {
         {/* Here is the main signup page content. */}
         <div className="rounded-lg bg-gray-400/20 p-15 w-1/3  flex flex-col gap-3">
             <p className="text-2xl text-white">Instructor App</p>
-            <p className="text-xl">Select Your Institution</p>
+            <p className="text-xl text-white">Select Your Institution</p>
             <div className="border-b-2 border-gray-500"></div>
             <select className="bg-white rounded-lg p-2 text-xl text-black justify-start items-end mb-10">
                 <option>University College</option>
                 <option>City College Of New York</option>
             </select>
-            <p className="text-xl">Instructor Information</p>
+            <p className="text-xl text-white">Instructor Information</p>
             <div className="border-b-2 border-gray-500"></div>
             <span className="text-lg flex flex-row gap-2">
                 <div>
-                    <p>First Name</p>
+                    <p className="text-white">First Name</p>
                     <input className="bg-white rounded-md py-2 text-black" ></input>
                 </div>
                 <div>
-                    <p>Last Name</p>
+                    <p className="text-white">Last Name</p>
                     <input className="bg-white rounded-md py-2 text-black" ></input>
                 </div>
             </span>
             <span className="text-lg flex flex-row gap-2">
                 <div>
-                    <p>Email</p>
+                    <p className="text-white">Email</p>
                     <input className="bg-white rounded-md py-2 text-black" ></input>
                 </div>
                 <div>
-                    <p>Phone</p>
+                    <p className="text-white">Phone</p>
                     <input className="bg-white rounded-md py-2 text-black" ></input>
                 </div>
             </span>
-            <p>Address</p>
+            <p className="text-white">Address</p>
             <input className="bg-white rounded-md py-2 text-black mb-10" ></input>
-            <p className="text-xl">Area Of Expertise</p>
+            <p className="text-xl text-white">Area Of Expertise</p>
             <div className="border-b-2 border-gray-500"></div>
-            <p>Degree Level</p>
+            <p className="text-white">Degree Level</p>
             <select className="bg-white rounded-lg p-2 text-xl text-black justify-start items-end">
                 <option>B.S</option>
                 <option>M.S</option>
                 <option>Ph.D</option>
             </select>
-            <p>Topic</p>
+            <p className="text-white">Topic</p>
             <select className="bg-white rounded-lg p-2 text-xl text-black justify-start items-end mb-10">
                 <option>Computer Science</option>
                 <option>Computer Engineering</option>
